@@ -19,7 +19,7 @@ namespace LeetCode.Tests.Array
         [Fact]
         public void Given_a_number_of_rows_when_generate_then_should_constructed_as_pascal_triangle()
         {
-            var solution = new PascalTriangleSolution();
+            var solution = new PascalTriangle();
             var result = solution.Generate(Number);
             Assert.Equal(_triangle, result);
         }

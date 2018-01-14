@@ -14,7 +14,7 @@ namespace LeetCode.Array
     /// [1,4,6,4,1]
     /// ]
     /// </summary>
-    public class PascalTriangleSolution
+    public class PascalTriangle
     {
         public IList<List<int>> Generate(int numRows)
         {

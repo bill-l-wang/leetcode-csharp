@@ -15,11 +15,11 @@ namespace LeetCode.Tests.Array
         [Fact]
         public void Given_an_array_when_plueone_then_the_value_shouldbe_added()
         {
-            var solution = new PlusOneSolution();
-            var lengthChanged = solution.PlusOne(_carriedArray).ToArray();
+            var solution = new PlusOne();
+            var lengthChanged = solution.Plus(_carriedArray).ToArray();
             Assert.Equal(_carriedAfterPlus, lengthChanged);
 
-            var lengthUnchanged = solution.PlusOne(_unCarriedArray).ToArray();
+            var lengthUnchanged = solution.Plus(_unCarriedArray).ToArray();
             Assert.Equal(_unCarriedAfterPlus, lengthUnchanged);
         }
     }

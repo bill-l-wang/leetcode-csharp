@@ -10,9 +10,9 @@ namespace LeetCode.Array
     /// [1, 2, 3, 4] represents integer 1234, add one to 1234(the length of array not changed), you get 1235. 
     /// but [9, 9, 9, 9] represents 9999, add one to 9999, you get 10000(the length of array changed)
     /// </summary>
-    public class PlusOneSolution
+    public class PlusOne
     {
-        public int[] PlusOne(int[] digits)
+        public int[] Plus(int[] digits)
         {
             var carryValue = 1;
             for (var i = digits.Length - 1; i >= 0; i--)
