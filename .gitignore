@@ -1,3 +1,6 @@
 /.vs
 /LeetCode/bin
 /LeetCode/obj
+/LeetCode.Tests/bin
+/LeetCode.Tests/obj
+/packages
