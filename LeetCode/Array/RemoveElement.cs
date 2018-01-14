@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace LeetCode.Array
+﻿namespace LeetCode.Array
 {
     /// <summary>
     /// Given an array and a value, remove all instances of that>value in place and return the new length.
@@ -24,11 +22,6 @@ namespace LeetCode.Array
             }
 
             return j;
-        }
-
-        public int RemoveElemets(int[] array, int element)
-        {
-            return array.Count(a => a != element);
         }
     }
 }
