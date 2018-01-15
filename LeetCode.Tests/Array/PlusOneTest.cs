@@ -13,7 +13,7 @@ namespace LeetCode.Tests.Array
         private readonly int[] _unCarriedAfterPlus = { 1, 2, 3, 5 };
 
         [Fact]
-        public void Given_an_array_when_plueone_then_the_value_shouldbe_added()
+        public void Given_an_array_when_plus_one_then_the_value_should_be_added()
         {
             var solution = new PlusOne();
             var lengthChanged = solution.Plus(_carriedArray).ToArray();

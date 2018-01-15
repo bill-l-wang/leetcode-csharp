@@ -19,7 +19,7 @@ namespace LeetCode.Tests.Array
         }
 
         [Fact]
-        public void Given_two_sorted_array_when_merge_then_should_be_merged_to_one_sroted_array()
+        public void Given_two_sorted_array_when_merge_then_should_be_merged_as_one_sorted_array()
         {
             var solution = new MergeSortedArray();
             solution.Merge(_numbersFirst, 5, _numbersSecond, 4);
