@@ -18,7 +18,7 @@
                 }
                 else
                 {
-                    nums2[m + n - 1] = nums1[--m];
+                    nums1[m + n - 1] = nums1[--m];
                 }
             }
         }
