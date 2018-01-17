@@ -65,5 +65,30 @@ namespace LeetCode.Array
 
             return results;
         }
+
+        public List<List<int>> Sums(int[] nums)
+        {
+            var numbers = nums.OrderBy(n => n).ToArray();
+            var numberPairs = numbers.Select((value, index) => new {index, value}).ToArray();
+
+            var results = new List<List<int>>();
+            for (var i = 0; i < numbers.Length - 2; i++)
+            {
+                if (i > 0 && numbers[i] == numbers[i - 1]) i++;
+
+                var j = i + 1;
+                while (j < numbers.Length)
+                {
+                    var complement = 0 - numbers[i] - numbers[j];
+
+                    if (numberPairs.Any(d => d.value == complement && d.index > j))
+                    {
+                        results.Add(new List<int> { numbers[i], numbers[j], complement });
+                    }
+                    j++;
+                }
+            }
+            return results;
+        }
     }
 }

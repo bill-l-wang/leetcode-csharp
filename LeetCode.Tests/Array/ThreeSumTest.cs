@@ -6,9 +6,11 @@ namespace LeetCode.Tests.Array
 {
     public class ThreeSumTest
     {
-        private readonly int[] _numbers = {-1, 0, 1, 2, -1, -4};
+        private readonly int[] _numbers = {-1, 0, 1, 2, -1, -4, 3};
+
         private readonly List<List<int>> _expected = new List<List<int>>
         {
+            new List<int> {-4, 1, 3},
             new List<int> {-1, -1, 2},
             new List<int> {-1, 0, 1}
         };
@@ -19,6 +21,9 @@ namespace LeetCode.Tests.Array
             var solution = new ThreeSum();
             var result = solution.Sum(_numbers);
             Assert.Equal(_expected, result);
+
+            var result1 = solution.Sums(_numbers);
+            Assert.Equal(_expected, result1);
         }
     }
 }
