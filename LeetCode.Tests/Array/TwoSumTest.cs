@@ -6,25 +6,24 @@ namespace LeetCode.Tests.Array
 {
     public class TwoSumTest
     {
-        private const int Target = 9;
-        private const int UnExpectedTarget = 8;
         private const string InvalidArgumentMessage = "No two sum solution";
-        private readonly int[] _nums = {2, 7, 11, 15};
-        private readonly int[] _expected = {0, 1};
 
-        [Fact]
-        public void Given_an_array_when_sum_succeed_then_return_indices_can_added_up_to_target()
+        [Theory]
+        [InlineData(new[] {2, 7, 11, 15}, 9, new[] {0, 1})]
+        public void Given_an_array_when_sum_succeed_then_return_indices_can_added_up_to_target(
+            int[] nums, int target, int[] expected)
         {
             var solution = new TwoSum();
-            var result = solution.Sum(_nums, Target);
-            Assert.Equal(_expected, result);
+            var actual = solution.Sum(nums, target);
+            Assert.Equal(expected, actual);
         }
 
-        [Fact]
-        public void Given_an_array_when_can_not_find_indices_then_should_throw()
+        [Theory]
+        [InlineData(new[] { 2, 7, 11, 15 }, 8)]
+        public void Given_an_array_when_can_not_find_indices_then_should_throw(int[] nums, int target)
         {
             var solution = new TwoSum();
-            var exception = Assert.Throws<ArgumentException>(() => solution.Sum(_nums, UnExpectedTarget));
+            var exception = Assert.Throws<ArgumentException>(() => solution.Sum(nums, target));
             Assert.Equal(InvalidArgumentMessage, exception.Message);
         }
     }

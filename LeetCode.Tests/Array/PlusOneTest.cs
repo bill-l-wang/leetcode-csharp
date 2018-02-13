@@ -6,21 +6,15 @@ namespace LeetCode.Tests.Array
 {
     public class PlusOneTest
     {
-        private readonly int[] _carriedArray = { 9, 9, 9, 9 };
-        private readonly int[] _unCarriedArray = { 1, 2, 3, 4 };
-
-        private readonly int[] _carriedAfterPlus = { 1, 0, 0, 0, 0 };
-        private readonly int[] _unCarriedAfterPlus = { 1, 2, 3, 5 };
-
-        [Fact]
-        public void Given_an_array_when_plus_one_then_the_value_should_be_added()
+        [Theory]
+        [InlineData(new [] { 9, 9, 9, 9 }, new[]{ 1, 0, 0, 0, 0 })]
+        [InlineData(new [] { 1, 2, 3, 4 }, new[]{ 1, 2, 3, 5 })]
+        public void Given_an_array_when_plus_one_then_the_value_should_be_added(
+            int[] inputArray, int[] expected)
         {
             var solution = new PlusOne();
-            var lengthChanged = solution.Plus(_carriedArray).ToArray();
-            Assert.Equal(_carriedAfterPlus, lengthChanged);
-
-            var lengthUnchanged = solution.Plus(_unCarriedArray).ToArray();
-            Assert.Equal(_unCarriedAfterPlus, lengthUnchanged);
+            var actual = solution.Plus(inputArray).ToArray();
+            Assert.Equal(expected, actual);
         }
     }
 }

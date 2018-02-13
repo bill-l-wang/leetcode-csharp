@@ -5,8 +5,8 @@ namespace LeetCode.Tests.Array
 {
     public class MergeSortedArrayTest
     {
-        private int[] _numbersFirst = new int[9];
-        private int[] _numbersSecond = {2, 3, 4, 5};
+        private readonly int[] _numbersFirst = new int[9];
+        private readonly int[] _numbersSecond = {2, 3, 4, 5};
         private readonly int[] _expected = {2, 3, 3, 4, 5, 5, 6, 7, 8};
 
         public MergeSortedArrayTest()
